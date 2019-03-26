@@ -2,3 +2,19 @@ h2{
     font-size: 1rem;
     color: #f76c6c;
 }
+
+.vital{
+    color: red;
+}
+
+.movie{
+    color: white;
+    text-shadow: 1px 1px 10px black;
+    font-size: 1.3rem;
+    transition: all 0.5s;
+}
+
+.mList{
+    margin: auto;
+    text-align: center;
+}

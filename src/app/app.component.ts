@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Victor';
+  title = 'Charcut party';
+
+  isThisIngredientVital:boolean = true;
+
+  displayGuestList:boolean = true;
+
+  songList:string[] = ['Lateralus', 'Clenching the fist of dissent', 'Chop Suey!'];
+
+  showMovies:boolean = true;
 }

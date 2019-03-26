@@ -1,6 +1,36 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h2>Fiche de contact</h2>
+<!--<h2>Fiche de contact</h2>
 <user-profile></user-profile>
 
+<ul>
+    <li>Pommes de terre</li>
+    <li [ngStyle]="{backgroundColor: isThisIngredientVital ? 'red': 'yellow'}">Rosette</li>
+    <li>Jambon</li>
+    <li [ngClass]="{'vital': isThisIngredientVital}">Cornichons</li>
+    <li>Chou-fleur</li>
+</ul>
+<hr>
 
+<ul *appDisplayGuests="displayGuestList">
+    <li>Brenda</li>
+    <li>Jean-Mi</li>
+    <li>David</li>
+    <li>Robert</li>
+</ul>
+
+<ul *ngFor="let song of songList">
+    <li>{{song}}</li>
+</ul>
+<hr>
+<h1 appHighlight>Galette</h1>-->
+
+<div class="mList"><h1>Movie list</h1>
+<ul *appDisplaymovie="showMovies">
+    <li appFirstmovie>The Godfather</li>
+    <li>Star Wars</li>
+    <li>Rear Window</li>
+    <li>Pulp Fiction</li>
+    <li>Jaws</li>
+</ul>
+</div>
 <router-outlet></router-outlet>
