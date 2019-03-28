@@ -1,3 +1,13 @@
+h1{
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 20%;
+    margin: auto;
+    padding: 1%;
+    background-color: rgb(207, 206, 183);
+}
+
 h2{
     font-size: 1rem;
     color: #f76c6c;
