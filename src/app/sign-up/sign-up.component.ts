@@ -9,9 +9,12 @@ import { Sign } from '../sign';
 })
 export class SignUpComponent implements OnInit {
 
-  signUp: Sign = {
-    email: "Enter your e-mail"
-  };
+
+  signUp: Sign = new Sign();
+
+  onSubmit(){
+    console.log(this.signUp);
+  }
   
   constructor() { }
 

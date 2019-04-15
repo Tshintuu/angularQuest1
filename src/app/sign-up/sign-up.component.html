@@ -1,7 +1,28 @@
 <h1>{{signUp.email}}</h1>
 
-<div>
-  <label>E-mail:
-    <input [(ngModel)]='signUp.email' type='email' name='email'>
-  </label>
-</div>
+<form (ngSubmit)="myForm.valid && onSubmit()" #myForm="ngForm">
+  <!--<div>
+    Form submitted ? {{ myForm.submitted }}<br/>
+    Form valid ? {{ myForm.valid }}<br/>
+    Form invalid ? {{myForm.valid }}
+  </div>-->
+  <div>
+  <label for="user">User</label>
+  <input name="user" type="text" [(ngModel)]="signUp.user" #user="ngModel" required minlength="4" maxlength="25"/>
+  </div>
+  <div *ngIf="user.errors && myForm.submitted">
+    <span *ngIf="user.errors.required">This field is required</span>
+    <span *ngIf="user.errors.minlength">This field should be at least 4 characters</span>
+    <span *ngIf="user.errors.maxlength">This field should not exceed 25 characters</span>
+  </div>
+  <div>
+  <label for="email">E-mail:</label>
+  <input [(ngModel)]='signUp.email' type='email' #email="ngModel" name='email' required email/>
+  </div>
+  <div *ngIf="email.errors && myForm.submitted">
+      <span *ngIf="email.errors.required">This field is required</span>
+      <span *ngIf="email.errors.email">Email field is invalid (example@xyz.com)</span>
+
+  </div>
+  <button type="submit">Submit</button>
+</form>
